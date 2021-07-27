@@ -16,6 +16,15 @@ class HornedBeasts extends React.Component {
     });
   };
 
+  dataToModal = () => {
+    this.props.modalData(
+      this.props.title,
+      this.props.image_url,
+      this.props.description,
+      true
+    );
+  };
+
   render() {
     console.log(this.props);
     return (
