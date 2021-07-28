@@ -16,7 +16,9 @@ class HornedBeasts extends React.Component {
     });
   };
 
+ 
   dataToModal = () => {
+    this.props.updateVisible();
     this.props.modalData(
       this.props.title,
       this.props.image_url,
@@ -36,6 +38,7 @@ class HornedBeasts extends React.Component {
         <img src={this.props.img} alt="" /> */}
           <Card style={{ width: "18rem" }}>
             <Card.Img
+              onClick= {()=>{this.dataToModal();}}
               onClick={this.increaseNumOfClick}
               variant="top"
               src={this.props.image_url}

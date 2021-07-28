@@ -10,7 +10,13 @@ class SelectedBeast extends React.Component {
   render() {
     return (
       <div>
-        <Modal show={this.props.showModal} onHide={this.exitModal}>
+        <Modal
+          visible={this.props.visible}
+          effect="fadeInUp"
+          onClickAway={this.props.updateVisible}
+          show={this.props.showModal}
+          onHide={this.exitModal}
+        >
           <Modal.Header closeButton>
             <Modal.Title>{this.props.title}</Modal.Title>
           </Modal.Header>
@@ -19,7 +25,7 @@ class SelectedBeast extends React.Component {
             <p>{this.props.description}</p>
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={this.exitModal}>
+            <Button variant="secondary" onClick={this.props.updateVisible}>
               Close
             </Button>
           </Modal.Footer>

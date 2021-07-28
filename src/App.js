@@ -15,6 +15,7 @@ class App extends React.Component {
       image_url: "imgu",
       description: "des",
       show: false,
+      visible: false,
     };
   }
 
@@ -26,15 +27,20 @@ class App extends React.Component {
     });
   };
 
-  handleShow = () => {
-    this.setState({
-      show: true,
-    });
-  };
+  // handleShow = () => {
+  //   this.setState({
+  //     show: true,
+  //   });
+  // };
 
   handleHide = () => {
     this.setState({
       show: false,
+    });
+  };
+  updateVisible = () => {
+    this.setState({
+      visible: !this.state.visible,
     });
   };
 
@@ -44,13 +50,20 @@ class App extends React.Component {
         {/* We are creating a new instances of the Main class component */}
         <Header />
         <SelectedBeast
+          visible={this.state.visible}
           show={this.state.show}
           hidden={this.handleHide}
           title={this.state.title}
           image_url={this.state.image_url}
           description={this.state.description}
+          modalData={this.modalData}
+          updateVisible={this.updateVisible}
         />
-        <Main dataList={data} modalData={this.modalData} />
+        <Main
+          dataList={data}
+          modalData={this.modalData}
+          updateVisible={this.updateVisible}
+        />
         <Footer />
       </div>
     );
