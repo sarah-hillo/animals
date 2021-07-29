@@ -1,19 +1,19 @@
 // first we are import the react library
-import React from "react";
-import "./App.css";
-import Main from "./components/main";
-import Header from "./components/header";
-import Footer from "./components/footer";
-import data from "./components/assets/data.json";
-import SelectedBeast from "./components/SelectedBeast";
+import React from 'react';
+import './App.css';
+import Main from './components/main';
+import Header from './components/header';
+import Footer from './components/footer';
+import data from './components/assets/data.json';
+import SelectedBeast from './components/SelectedBeast';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: "tit",
-      image_url: "imgu",
-      description: "des",
+      title: 'tit',
+      image_url: 'imgu',
+      description: 'des',
       show: false,
       visible: false,
     };
