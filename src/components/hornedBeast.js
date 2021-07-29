@@ -30,7 +30,7 @@ class HornedBeasts extends React.Component {
     console.log(this.props);
     return (
       <div>
-        {' '}
+        
         <section>
           {/* <h1>{this.props.title} Title</h1>
         <p>{this.props.description} </p>
