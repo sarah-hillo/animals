@@ -1,7 +1,7 @@
-import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
-import Modal from "react-bootstrap/Modal";
-import Button from "react-bootstrap/Button";
+import React from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Modal from 'react-bootstrap/Modal';
+import Button from 'react-bootstrap/Button';
 
 class SelectedBeast extends React.Component {
   exitModal = () => {
@@ -12,7 +12,7 @@ class SelectedBeast extends React.Component {
       <div>
         <Modal
           visible={this.props.visible}
-          effect="fadeInUp"
+          effect='fadeInUp'
           onClickAway={this.props.updateVisible}
           show={this.props.showModal}
           onHide={this.exitModal}
@@ -25,7 +25,7 @@ class SelectedBeast extends React.Component {
             <p>{this.props.description}</p>
           </Modal.Body>
           <Modal.Footer>
-            <Button variant="secondary" onClick={this.props.updateVisible}>
+            <Button variant='secondary' onClick={this.props.updateVisible}>
               Close
             </Button>
           </Modal.Footer>
