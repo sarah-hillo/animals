@@ -29,8 +29,7 @@ class HornedBeasts extends React.Component {
   render() {
     console.log(this.props);
     return (
-      <div>
-        
+      <div>      
         <section>
           {/* <h1>{this.props.title} Title</h1>
         <p>{this.props.description} </p>
