@@ -32,23 +32,23 @@ class HornedBeasts extends React.Component {
       <div><section>{/* <h1>{this.props.title} Title</h1>
         <p>{this.props.description} </p>
         <img src={this.props.img} alt="" /> */}
-          <Card style={{ width: '18rem' }}>
-            <Card.Img
-              onClick={() => {
-                this.dataToModal();
-              }}
-              onClick={this.increaseNumOfClick}
-              variant='top'
-              src={this.props.image_url}
-            />
-            <Card.Body>
-              <Card.Title>{this.props.title}</Card.Title>
-              <Card.Text>{this.props.description}</Card.Text>
-              <Card.Text>favorited &#x2665;{this.state.numOfClick}</Card.Text>
-              <Button variant='primary'>Choose me :) </Button>
-            </Card.Body>
-          </Card>
-        </section>
+      <Card style={{ width: '18rem' }}>
+        <Card.Img
+          onClick={() => {
+            this.dataToModal();
+          }}
+          onClick={this.increaseNumOfClick}
+          variant='top'
+          src={this.props.image_url}
+        />
+        <Card.Body>
+          <Card.Title>{this.props.title}</Card.Title>
+          <Card.Text>{this.props.description}</Card.Text>
+          <Card.Text>favorited &#x2665;{this.state.numOfClick}</Card.Text>
+          <Button variant='primary'>Choose me :) </Button>
+        </Card.Body>
+      </Card>
+      </section>
       </div>
     );
   }
