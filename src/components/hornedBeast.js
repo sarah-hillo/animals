@@ -1,7 +1,9 @@
-import React from 'react';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
+
+import React from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import Card from "react-bootstrap/Card";
+// import Button from "react-bootstrap/Button";
+
 class HornedBeasts extends React.Component {
   constructor(props) {
     super(props);
@@ -11,6 +13,7 @@ class HornedBeasts extends React.Component {
   }
 
   increaseNumOfClick = () => {
+    
     this.setState({
       numOfClick: this.state.numOfClick + 1,
     });
@@ -29,9 +32,12 @@ class HornedBeasts extends React.Component {
   render() {
     console.log(this.props);
     return (
-      <div><section>{/* <h1>{this.props.title} Title</h1>
-        <p>{this.props.description} </p>
-        <img src={this.props.img} alt="" /> */}
+
+      <div><section>{/* <h2>{this.props.title} Title</h2>
+
+        <img src={this.props.imageUrl} alt="pet img" title="The Pet" />
+         <p>{this.props.description} </p>
+        */}}
       <Card style={{ width: '18rem' }}>
         <Card.Img
           onClick={() => {
@@ -40,15 +46,18 @@ class HornedBeasts extends React.Component {
           onClick={this.increaseNumOfClick}
           variant='top'
           src={this.props.image_url}
+          alt="horned beast img"
+          title="HORNED BEAST"
         />
         <Card.Body>
-          <Card.Title>{this.props.title}</Card.Title>
-          <Card.Text>{this.props.description}</Card.Text>
+          <Card.Title><h2>{this.props.title}</h2></Card.Title>
+          <Card.Text><p>{this.props.description}</p></Card.Text>
           <Card.Text>favorited &#x2665;{this.state.numOfClick}</Card.Text>
-          <Button variant='primary'>Choose me :) </Button>
+//           <Button variant='primary'>Choose me :) </Button>
         </Card.Body>
       </Card>
       </section>
+
       </div>
     );
   }

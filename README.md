@@ -1,5 +1,9 @@
 # animals
 
+
+### Overview of the project
+An application that displays images and information of horned animals. This application will allow the user to filter the images by number of horns and chose your favorite image.
+=======
 ## class02
 Number and name of feature: Feature #1: Display images
 
@@ -44,7 +48,7 @@ Start time: _7pm ____
 Finish time: _10 pm____
 
 Actual time needed to complete:3 hours 
-********************
+
 
 
 Number and name of feature: ________________________________
