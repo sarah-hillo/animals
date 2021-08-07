@@ -25,7 +25,7 @@ class HornedBeasts extends React.Component {
       this.props.title,
       this.props.image_url,
       this.props.description,
-      true
+      
     );
   };
 
@@ -37,7 +37,9 @@ class HornedBeasts extends React.Component {
 
         <img src={this.props.imageUrl} alt="pet img" title="The Pet" />
          <p>{this.props.description} </p>
-        */}}
+        */}
+
+
       <Card style={{ width: '18rem' }}>
         <Card.Img
           onClick={() => {
@@ -46,18 +48,17 @@ class HornedBeasts extends React.Component {
           onClick={this.increaseNumOfClick}
           variant='top'
           src={this.props.image_url}
-          alt="horned beast img"
-          title="HORNED BEAST"
+          alt={this.props.alt}
+          title={this.props.title}
         />
         <Card.Body>
           <Card.Title><h2>{this.props.title}</h2></Card.Title>
           <Card.Text><p>{this.props.description}</p></Card.Text>
           <Card.Text>favorited &#x2665;{this.state.numOfClick}</Card.Text>
-//           <Button variant='primary'>Choose me :) </Button>
+          {/* <Button variant='primary'>Choose me :) </Button> */}
         </Card.Body>
       </Card>
       </section>
-
       </div>
     );
   }
