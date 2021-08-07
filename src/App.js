@@ -11,10 +11,9 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      title: 'tit',
-      image_url: 'imgu',
-      description: 'des',
-      show: false,
+      title: null,
+      image_url: null,
+      description: null,
       visible: false,
     };
   }
@@ -22,7 +21,7 @@ class App extends React.Component {
   modalData = (title, image_url, description) => {
     this.setState({
       title: title,
-      url: image_url,
+      image_url: image_url,
       description: description,
     });
   };
@@ -33,14 +32,14 @@ class App extends React.Component {
   //   });
   // };
 
-  handleHide = () => {
-    this.setState({
-      show: false,
-    });
-  };
+  // handleHide = () => {
+  //   this.setState({
+  //     show: false,
+  //   });
+  // };
   updateVisible = () => {
     this.setState({
-      visible: !this.state.visible,
+      visible: !this.state.visible
     });
   };
 
@@ -51,8 +50,6 @@ class App extends React.Component {
         <Header />
         <SelectedBeast
           visible={this.state.visible}
-          show={this.state.show}
-          hidden={this.handleHide}
           title={this.state.title}
           image_url={this.state.image_url}
           description={this.state.description}
@@ -60,7 +57,7 @@ class App extends React.Component {
           updateVisible={this.updateVisible}
         />
         <Main
-          dataList={data}
+          data={data}
           modalData={this.modalData}
           updateVisible={this.updateVisible}
         />
